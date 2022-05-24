@@ -1,0 +1,193 @@
+.main-content {
+    padding: rem(50) rem(50) rem(40) rem(50);
+    flex: 1;
+
+    .complete {
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+
+        &__text {
+            @include font(12, 800);
+            color: $gray;
+        }
+
+        &__bar {
+            width: rem(90);
+            border-radius: rem(15);
+            height: rem(8);
+            background-color: $gray2;
+            margin-top: rem(3);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 30%;
+                background-color: $red;
+                border-radius: rem(15);
+            }
+        }
+    }
+
+    .dashboard-card {
+        display: flex;
+        flex-direction: column;
+        padding: rem(30);
+        border-radius: rem(10);
+        position: relative;
+        height: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: rem(10);
+        }
+
+        &--red {
+            background-color: $red;
+            box-shadow: rgba(228, 54, 116, 0.3) 0px 1px 0px, rgba(228, 54, 116, 0.3) 0px 8px 24px, rgba(228, 54, 116, 0.3) 0px 16px 48px;
+
+            &::after {
+                top: 0;
+                right: 0;
+                background-color: #e9668f;
+                clip-path: polygon(100% 0, 100% 76%, 75% 27%, 31% 0);
+            }
+        }
+
+        &--purple {
+            background-color: #ae95ee;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                rgba(0, 0, 0, 0.07) 0px 8px 16px,
+                rgba(0, 0, 0, 0.07) 0px 16px 32px,
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+            &::after {
+                bottom: 0;
+                left: 0;
+                background-color: #c2a3e8;
+                clip-path: polygon(0 100%, 55% 100%, 21% 80%, 0 25%);
+            }
+        }
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(35);
+            height: rem(35);
+            border-radius: rem(10);
+            background-color: #5f324241;
+            position: relative;
+            z-index: 1;
+
+            i {
+                @include font(16, 700);
+                color: white;
+            }
+        }
+
+        &__more {
+            position: relative;
+            z-index: 1;
+
+            i {
+                @include font(22, 700);
+                color: white;
+            }
+        }
+
+        &__title {
+            color: white;
+            @include font(20, 700);
+            margin-top: rem(30);
+            margin-bottom: rem(20);
+            position: relative;
+            z-index: 1;
+        }
+
+        &__img {
+            position: absolute;
+            bottom: 0;
+            right: rem(50);
+            height: 90%;
+        }
+    }
+
+    .tasks {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: rem(35);
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top: rem(37);
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: rgb(236, 236, 236);
+        }
+
+        &__tab {
+            .nav {
+                border: none;
+                gap: rem(40);
+                &-link {
+                    border: none;
+                    padding: 0;
+                    padding-bottom: rem(15);
+                    color: $gray;
+                    position: relative;
+                    @include font(16, 600);
+
+                    &.active{
+                        color: #8560e9;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 120%;
+                            height: 2px;
+                            background-color: #6200e7;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: rem(10);
+            cursor: pointer;
+
+            input {
+                border: none;
+                width: rem(60);
+                font-weight: 500;
+                color: $gray;
+                transition: 0.3s;
+
+                &:focus{
+                   width: rem(150);
+                }
+            }
+
+            i {
+                color: $gray; 
+            }
+        }
+    }
+}

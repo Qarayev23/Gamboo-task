@@ -1,0 +1,40 @@
+.g-title {
+    @include font(20, 700);
+}
+
+.collaborators {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    transform: translateX(rem(-5));
+
+    &__img {
+        background-color: white;
+        padding: rem(2);
+        border-radius: rem(50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:nth-child(1) {
+            transform: translateX(rem(5));
+            z-index: 1;
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            transform: translateX(rem(-5));
+            z-index: 3;
+        }
+
+        img {
+            width: rem(23);
+            height: rem(23);
+            border-radius: rem(50);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$black: #140E33;
+$gray: #a3a5b6;
+$gray2: #dde0e6;
+$red: #e43674;
+
+$font-types: (
+  "Bold": 700,
+  "Regular": 400,
+  "SemiBold": 600,
+  "ExtraBold": 900,
+  "Medium": 500,
+  "Light": 300,
+);
+
+$break-points: (
+  "sm": 468,
+  "md": 768,
+  "lg": 1024,
+  "xl": 1199,
+  "xxl": 1440,
+);
+
+$desktop-width: map-get($break-points, "xl");
+$desktop-sm-width: map-get($break-points, "lg");
+$tablet-width: map-get($break-points, "md");
+$mobile-width: map-get($break-points, "sm");

@@ -1,0 +1,91 @@
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(200);
+
+    &__title {
+        @include font(50, 600);
+        margin-bottom: rem(70);
+    }
+
+    .google-btn {
+        display: flex;
+        align-items: center;
+        width: rem(220);
+        height: rem(50);
+        background-color: $google-blue;
+        border-radius: rem(4);
+        cursor: pointer;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);
+        font-size: rem(20);
+        transition: 0.2s;
+
+        .google-icon-wrapper {
+            margin-left: 1px;
+            width: rem(46);
+            height: rem(46);
+            border-radius: rem(2);
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .google-icon {
+            width: rem(25);
+            height: rem(25);
+        }
+
+        .btn-text {
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        &:hover {
+            box-shadow: 0 0 6px $google-blue;
+        }
+
+        &:active {
+            background: $button-active-blue;
+        }
+    }
+
+    .sign-out {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(220);
+        height: rem(50);
+        color: white;
+        background-color: $google-blue;
+        border-radius: rem(4);
+        cursor: pointer;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);
+        font-size: rem(20);
+        transition: 0.2s;
+
+        &:hover {
+            box-shadow: 0 0 6px $google-blue;
+        }
+
+        &:active {
+            background: $button-active-blue;
+        }
+    }
+
+    .user-info {
+        @include font(20, 600);
+        margin-bottom: rem(25);
+    }
+
+    .user-avatar {
+        border-radius: 50%;
+        margin-bottom: rem(50);
+    }
+}

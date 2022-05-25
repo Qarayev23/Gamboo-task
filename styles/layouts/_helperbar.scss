@@ -1,7 +1,20 @@
 .helperbar {
     width: rem(350);
-    padding: rem(50) rem(30) rem(30) rem(30);
+    padding: rem(50) rem(30);
     border-left: 1px solid #ebebeb;
+
+    @include breakpoint-max($desktop-sm-width) {
+        width: rem(320);
+        padding: rem(30) rem(25);
+    }
+
+    @include breakpoint-max($tablet-width) {
+        width: 100%;
+    }
+
+    @include breakpoint-max($mobile-width) {
+        padding: rem(20) rem(15) rem(30) rem(15);
+    }
 
     .scheudle-icons {
         display: flex;
@@ -22,6 +35,10 @@
     .call {
         padding-bottom: rem(50);
         border-bottom: 1px solid #ebebeb;
+
+        @include breakpoint-max($mobile-width) {
+            padding-bottom: rem(30);
+        }
 
         &__text {
             @include font(12, 600);
@@ -52,14 +69,14 @@
             border-radius: rem(15);
             display: flex;
             align-items: center;
+            justify-content: space-between;
             box-shadow: rgba(74, 220, 161, 0.4) 0px 8px 24px;
         }
 
         &__time {
             color: white;
             @include font(16, 600);
-            margin-left: rem(30);
-            margin-right: auto;
+            padding-right: rem(20);
         }
 
         &__icon {
@@ -74,6 +91,10 @@
     .task-status {
         padding-bottom: rem(40);
         border-bottom: 1px solid #ebebeb;
+
+        @include breakpoint-max($mobile-width) {
+            padding-bottom: rem(30);
+        }
 
         &__title {
             @include font(16, 700);
@@ -112,12 +133,17 @@
             }
         }
 
-        .collaborators__img {
-            img {
-                width: rem(20);
-                height: rem(20)
+        .collaborators {
+            justify-content: center;
+
+            &__img {
+                img {
+                    width: rem(20);
+                    height: rem(20)
+                }
             }
         }
+
     }
 
     .new-task {
@@ -141,6 +167,7 @@
 
             .swiper-button-prev,
             .swiper-button-next {
+                top: rem(13);
                 width: fit-content;
                 opacity: 1;
 
@@ -177,6 +204,16 @@
             gap: rem(5);
             padding: rem(4) rem(8);
             @include font(12, 700);
+
+            @include breakpoint-max($tablet-width){
+                font-size: rem(13);
+                gap: rem(8);
+                padding: rem(6) rem(10);
+                img {
+                    width: rem(17);
+                    height: rem(17);
+                }
+            }
 
             img {
                 width: rem(15);

@@ -3,6 +3,25 @@
     background-color: #fafafa;
     border-right: 1px solid #ebebeb;
     padding: rem(50) rem(20) rem(40) rem(30);
+    overflow-y: auto;
+    transition: 0.3s;
+
+    @include breakpoint-max($desktop-width) {
+        position: fixed;
+        width: rem(300);
+        left: -100%;
+        top: 0;
+        height: 100%;
+        z-index: 4;
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    @include breakpoint-max($mobile-width) {
+        padding-top: rem(35);
+    }
 
     &__caption {
         @include font(14, 600);
@@ -15,13 +34,17 @@
         gap: rem(25);
         margin-bottom: rem(65);
 
+        @include breakpoint-max($mobile-width){
+            margin-bottom: rem(50);
+        }
+
         &__item {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        a{
+        a {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -131,6 +154,7 @@
     }
 
     .user-info {
+        position: relative;
         display: flex;
         align-items: center;
         gap: rem(20);

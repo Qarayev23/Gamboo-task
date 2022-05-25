@@ -2,9 +2,17 @@
     @include font(20, 700);
 }
 
-.g-subtitle{
+.g-subtitle {
     @include font(13, 600);
     color: $gray;
+}
+
+.section-gap{
+    margin-top: rem(50);
+
+    @include breakpoint-max($mobile-width) {
+        margin-top: rem(30);
+    }
 }
 
 .collaborators {

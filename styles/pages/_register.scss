@@ -6,10 +6,17 @@ $button-active-blue: #1669F2;
     flex-direction: column;
     align-items: center;
     margin-top: rem(200);
+    text-align: center;
+    padding: 0 30px;
 
     &__title {
         @include font(50, 600);
         margin-bottom: rem(70);
+
+        @include breakpoint-max($tablet-width){
+            margin-bottom: rem(40);
+            font-size: rem(36);
+        }
     }
 
     .google-btn {
@@ -24,6 +31,11 @@ $button-active-blue: #1669F2;
         font-size: rem(20);
         transition: 0.2s;
 
+        @include breakpoint-max($tablet-width){
+            width: rem(170);
+            height: rem(40);
+        }
+
         .google-icon-wrapper {
             margin-left: 1px;
             width: rem(46);
@@ -34,6 +46,11 @@ $button-active-blue: #1669F2;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+
+            @include breakpoint-max($tablet-width){
+                width: rem(37);
+                height: rem(38);
+            }
         }
 
         .google-icon {
@@ -77,6 +94,11 @@ $button-active-blue: #1669F2;
         &:active {
             background: $button-active-blue;
         }
+
+        @include breakpoint-max($tablet-width){
+            width: rem(170);
+            height: rem(40);
+        }
     }
 
     .user-info {
@@ -87,5 +109,11 @@ $button-active-blue: #1669F2;
     .user-avatar {
         border-radius: 50%;
         margin-bottom: rem(50);
+
+        @include breakpoint-max($tablet-width){
+            width: rem(60);
+            height: rem(60);
+            margin-bottom: rem(30);
+        }
     }
 }

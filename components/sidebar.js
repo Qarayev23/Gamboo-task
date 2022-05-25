@@ -3,18 +3,21 @@ import Link from 'next/link'
 import { useSession } from 'next-auth/client';
 import { useRouter } from 'next/router';
 
-const Sidebar = () => {
+const Sidebar = ({ show, MenuClose }) => {
     const [session] = useSession();
     const router = useRouter();
-
+ 
     return (
-        <div className="sidebar">
+        <div className={show ? "sidebar active" : "sidebar"}>
             <div className="user-info">
                 <img className='user-avatar' src={session?.user.image} alt={session?.user.name} />
                 <div className='d-flex flex-column'>
                     <h4 className='user-name'>{session?.user.name}</h4>
                     <h4 className='user-position'>Front-end developer</h4>
                 </div>
+                <button type='button' className='menu-close' onClick={() => MenuClose(false)}>
+                    <i className="fa-solid fa-xmark"></i>
+                </button>
             </div>
             <h5 className="sidebar__caption">
                 Menu

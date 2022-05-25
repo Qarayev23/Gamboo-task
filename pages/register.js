@@ -1,5 +1,4 @@
 import { signIn, signOut, useSession } from 'next-auth/client';
-import Image from 'next/image'
 
 export default function Home() {
   const [session] = useSession();

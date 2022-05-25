@@ -2,12 +2,11 @@ import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Image from 'next/image'
 
 const Helperbar = () => {
   return (
     <div className='helperbar'>
-      <div className="d-flex justify-content-between mb-5">
+      <div className="d-flex justify-content-between">
         <h3 className='g-title'>Today&apos;s Scheudle</h3>
         <div className="scheudle-icons">
           <i className="fa-solid fa-list"></i>
@@ -15,8 +14,8 @@ const Helperbar = () => {
         </div>
       </div>
 
-      <div className="call mb-5">
-        <div className="d-flex align-items-center justify-content-between mb-5">
+      <div className="call section-gap">
+        <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex flex-column">
             <p className="call__text">30 minutes call with Client</p>
             <h5 className='call__title'>Project Discovery Call</h5>
@@ -26,16 +25,16 @@ const Helperbar = () => {
             Invite
           </button>
         </div>
-        <div className="call__box">
+        <div className="call__box section-gap">
           <div className="collaborators">
             <div className='collaborators__img'>
-              <Image src="/img/col-1.webp" width="23" height="23" alt="" />
+              <img src="/img/col-1.webp" alt="" />
             </div>
             <div className='collaborators__img'>
-              <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
+              <img src="/img/col-2.jpeg" alt="" />
             </div>
             <div className='collaborators__img'>
-              <Image src="/img/col-3.webp" width="23" height="23" alt="" />
+              <img src="/img/col-3.webp" alt="" />
             </div>
           </div>
           <span className='call__time'>28:35</span>
@@ -50,7 +49,7 @@ const Helperbar = () => {
         </div>
       </div>
 
-      <div className="task-status">
+      <div className="task-status section-gap">
         <div className="d-flex justify-content-between">
           <h5 className='task-status__title'>Design Project</h5>
           <span className='decor'>..</span>
@@ -61,7 +60,7 @@ const Helperbar = () => {
           <p className='g-subtitle'>In Progress</p>
         </div>
 
-        <div className="d-flex justify-content-between mt-5">
+        <div className="d-flex justify-content-between section-gap">
           <div className="d-flex flex-column">
             <p className="g-subtitle">Completed</p>
             <span className='task-status__number task-status__number--green'>114</span>
@@ -74,20 +73,20 @@ const Helperbar = () => {
             <p className="g-subtitle mb-1">Team members</p>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <Image src="/img/col-1.webp" width="20" height="20" alt="" />
+                <img src="/img/col-1.webp" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-2.jpeg" width="20" height="20" alt="" />
+                <img src="/img/col-2.jpeg" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-3.webp" width="20" height="20" alt="" />
+                <img src="/img/col-3.webp" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="d-flex justify-content-between mt-5">
+      <div className="d-flex justify-content-between section-gap">
         <h5 className='g-title'>New Task</h5>
         <span className='decor'>..</span>
       </div>
@@ -103,31 +102,31 @@ const Helperbar = () => {
           navigation
           className='new-task__slide'
         >
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
-          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="/img/smile.png" alt="" /></SwiperSlide>
         </Swiper>
       </div>
 
-      <span className='g-subtitle d-block mt-3 mb-2'>Add Collaborators</span>
+      <span className='g-subtitle d-block mt-3 mb-md-2 mb-3'>Add Collaborators</span>
 
       <div className="add-collaborators">
         <div className="add-collaborators__chip add-collaborators__chip--purple">
-        <Image src="/img/col-1.webp" width="20" height="20" alt="" />
+        <img src="/img/col-1.webp" alt="" />
           Angela
           <i className="fa-solid fa-xmark"></i>
         </div>
         <div className="add-collaborators__chip add-collaborators__chip--green">
-        <Image src="/img/col-1.webp" width="20" height="20" alt="" />
+        <img src="/img/col-1.webp" alt="" />
           Chris
           <i className="fa-solid fa-xmark"></i>
         </div>

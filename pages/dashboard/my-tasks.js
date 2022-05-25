@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { getSession, useSession } from 'next-auth/client';
 import { wrapper } from "../../store/store";
 import Tabs from 'react-bootstrap/Tabs'
@@ -13,8 +12,8 @@ const MyTasks = () => {
 
   return (
     <>
-      <div className="row mt-5">
-        <div className="col-5">
+      <div className="row section-gap">
+        <div className="col-lg-5 mb-3 mb-lg-0">
           <div className="dashboard-card dashboard-card--red">
             <div className="d-flex justify-content-between align-items-center">
               <div className="dashboard-card__icon">
@@ -27,19 +26,19 @@ const MyTasks = () => {
             <h3 className='dashboard-card__title'>R&D for New Banking Mobile App</h3>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <Image src="/img/col-1.webp" width="23" height="23" alt="" />
+                <img src="/img/col-1.webp" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
+                <img src="/img/col-2.jpeg" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-3.webp" width="23" height="23" alt="" />
+                <img src="/img/col-3.webp" alt="" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="col-7">
+        <div className="col-lg-7">
           <div className="dashboard-card dashboard-card--purple">
             <div className="dashboard-card__icon">
               <i className="fa-solid fa-key"></i>
@@ -47,13 +46,13 @@ const MyTasks = () => {
             <h3 className='dashboard-card__title'>Create Signup <br /> page</h3>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <Image src="/img/col-1.webp" width="23" height="23" alt="" />
+                <img src="/img/col-1.webp" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
+                <img src="/img/col-2.jpeg" alt="" />
               </div>
               <div className='collaborators__img'>
-                <Image src="/img/col-3.webp" width="23" height="23" alt="" />
+                <img src="/img/col-3.webp" alt="" />
               </div>
             </div>
             <img src="/img/card-img.png" className='dashboard-card__img' alt="" />
@@ -92,7 +91,7 @@ const MyTasks = () => {
                   data.map(item => {
                     if (!item.completed) {
                       return <li className='tasks-tab__item' key={item.id}>
-                        <Image src="/img/task-icon.png" width={38} height={38} className='tasks-tab__icon' alt="" />
+                        <img src="/img/task-icon.png" className='tasks-tab__icon' alt="" />
                         <div className="d-flex flex-column">
                           <h3 className='tasks-tab__title'>
                             {item.title}
@@ -102,15 +101,15 @@ const MyTasks = () => {
                           </p>
                         </div>
                         <div className="collaborators">
-                          <div className='collaborators__img'>
-                            <Image src="/img/col-1.webp" width="23" height="23" alt="" />
-                          </div>
-                          <div className='collaborators__img'>
-                            <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
-                          </div>
-                          <div className='collaborators__img'>
-                            <Image src="/img/col-3.webp" width="23" height="23" alt="" />
-                          </div>
+                          {
+                            item.collaborators.map(coll => {
+                              return (
+                                <div className='collaborators__img' key={item.imgUrl}>
+                                  <img src={coll.imgUrl} alt="" />
+                                </div>
+                              )
+                            })
+                          }
                         </div>
                       </li>
                     }
@@ -124,7 +123,7 @@ const MyTasks = () => {
                   data.map(item => {
                     if (item.completed) {
                       return <li className='tasks-tab__item' key={item.id}>
-                        <Image src="/img/task-icon.png" width={38} height={38} className='tasks-tab__icon' alt="" />
+                        <img src="/img/task-icon.png" className='tasks-tab__icon' alt="" />
                         <div className="d-flex flex-column">
                           <h3 className='tasks-tab__title'>
                             {item.title}
@@ -135,13 +134,13 @@ const MyTasks = () => {
                         </div>
                         <div className="collaborators">
                           <div className='collaborators__img'>
-                            <Image src="/img/col-1.webp" width="23" height="23" alt="" />
+                            <img src="/img/col-1.webp" alt="" />
                           </div>
                           <div className='collaborators__img'>
-                            <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
+                            <img src="/img/col-2.jpeg" alt="" />
                           </div>
                           <div className='collaborators__img'>
-                            <Image src="/img/col-3.webp" width="23" height="23" alt="" />
+                            <img src="/img/col-3.webp" alt="" />
                           </div>
                         </div>
                       </li>

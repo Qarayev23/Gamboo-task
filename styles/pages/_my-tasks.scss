@@ -1,36 +1,17 @@
 .main-content {
-    padding: rem(50) rem(40) rem(40) rem(40);
+    padding: rem(50) rem(40);
     flex: 1;
 
-    .complete {
-        display: flex;
-        align-items: center;
-        gap: rem(15);
+    @include breakpoint-max($desktop-sm-width) {
+        padding: rem(30) rem(25);
+    }
 
-        &__text {
-            @include font(12, 800);
-            color: $gray;
-        }
+    @include breakpoint-max($tablet-width) {
+        width: 100%;
+    }
 
-        &__bar {
-            width: rem(90);
-            border-radius: rem(15);
-            height: rem(8);
-            background-color: $gray2;
-            margin-top: rem(3);
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 30%;
-                background-color: $red;
-                border-radius: rem(15);
-            }
-        }
+    @include breakpoint-max($mobile-width) {
+        padding: rem(20) rem(15);
     }
 
     .dashboard-card {
@@ -124,6 +105,18 @@
             right: rem(50);
             height: 90%;
         }
+
+        @include breakpoint-max($mobile-width) {
+            padding: rem(25);
+
+            &__title {
+                @include font(18, 700);
+            }
+
+            &__img {
+                right: rem(30);
+            }
+        }
     }
 
     .tasks {
@@ -159,23 +152,22 @@
 
             &__item {
                 display: flex;
-                align-items: center
+                align-items: center;
+                gap: rem(15)
             }
 
             &__title {
                 @include font(17, 600);
-                margin-left: rem(15);
+                margin-bottom: rem(5);
             }
 
             &__text {
                 color: $gray;
                 @include font(12, 600);
-                margin-left: rem(15);
             }
 
             &__icon {
                 height: rem(38);
-                margin-right: rem(15);
                 margin-left: -2px;
             }
 
@@ -224,6 +216,11 @@
         position: relative;
         z-index: 1;
         cursor: pointer;
+
+        @include breakpoint-max($tablet-width){
+            transform: translateY(0);
+            margin-top: rem(30);
+        }
 
         input {
             border: none;

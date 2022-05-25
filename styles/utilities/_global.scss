@@ -7,6 +7,17 @@
     color: $gray;
 }
 
+.page-title{
+    @include font(44, 700);
+  margin-top: rem(200);
+  text-align: center;
+
+  @include breakpoint-max($tablet-width) {
+    font-size: rem(36);
+    margin-top: rem(60);
+  }
+}
+
 .section-gap{
     margin-top: rem(50);
 

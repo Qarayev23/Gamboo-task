@@ -4,9 +4,9 @@
     border-right: 1px solid #ebebeb;
     padding: rem(50) rem(20) rem(40) rem(30);
     overflow-y: auto;
-    transition: 0.3s;
 
     @include breakpoint-max($desktop-width) {
+        transition: 1.3s;
         position: fixed;
         width: rem(300);
         left: -100%;
@@ -16,6 +16,7 @@
 
         &.active {
             left: 0;
+            transition: 0.5s;
         }
     }
 
@@ -34,7 +35,7 @@
         gap: rem(25);
         margin-bottom: rem(65);
 
-        @include breakpoint-max($mobile-width){
+        @include breakpoint-max($mobile-width) {
             margin-bottom: rem(50);
         }
 

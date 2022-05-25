@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/client';
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Helperbar from './helperbar'
 import Sidebar from './sidebar'
@@ -16,6 +17,10 @@ export default function Layout({ children }) {
   function MenuClose(par) {
     setShow(par)
   }
+
+  const router = useRouter();
+
+  console.log(router);
 
   return (
     <>

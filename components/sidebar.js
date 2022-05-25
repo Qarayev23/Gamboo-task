@@ -25,7 +25,7 @@ const Sidebar = ({ show, MenuClose }) => {
             <ul className='sidebar-nav'>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/my-tasks">
-                        <a className={router.pathname == "/dashboard/my-tasks" ? "active" : ""}>
+                        <a className={router.pathname == "/dashboard/my-tasks" ? "active" : ""} onClick={() => MenuClose(false)}>
                             <i className="fa-solid fa-list-check"></i>
                             My tasks
                         </a>
@@ -33,7 +33,7 @@ const Sidebar = ({ show, MenuClose }) => {
                 </li>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/inbox">
-                        <a className={router.pathname == "/dashboard/inbox" ? "active" : ""}>
+                        <a className={router.pathname == "/dashboard/inbox" ? "active" : ""} onClick={() => MenuClose(false)}>
                             <i className="fa-solid fa-inbox"></i>
                             Inbox
                         </a>
@@ -41,7 +41,7 @@ const Sidebar = ({ show, MenuClose }) => {
                 </li>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/projects" >
-                        <a className={router.pathname == "/dashboard/projects" ? "active" : ""}>
+                        <a className={router.pathname == "/dashboard/projects" ? "active" : ""} onClick={() => MenuClose(false)}>
                             <i className="fa-solid fa-diagram-project"></i>
                             Projects
                         </a>
@@ -49,7 +49,7 @@ const Sidebar = ({ show, MenuClose }) => {
                 </li>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/standups" >
-                        <a className={router.pathname == "/dashboard/standups" ? "active" : ""}>
+                        <a className={router.pathname == "/dashboard/standups" ? "active" : ""} onClick={() => MenuClose(false)}>
                             <i className="fa-regular fa-clock"></i>
                             Standups
                         </a>
@@ -57,8 +57,8 @@ const Sidebar = ({ show, MenuClose }) => {
                 </li>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/meetings" >
-                        <a className={router.pathname == "/dashboard/meetings" ? "active" : ""}>
-                            <i className="fa-regular fa-calendar-minus"></i>
+                        <a className={router.pathname == "/dashboard/meetings" ? "active" : ""} onClick={() => MenuClose(false)}>
+                            <i className="fa-regular fa-calendar-minus"></i> 
                             Meetings
                         </a>
                     </Link>
@@ -66,7 +66,7 @@ const Sidebar = ({ show, MenuClose }) => {
                 </li>
                 <li className="sidebar-nav__item">
                     <Link href="/dashboard/settings" >
-                        <a className={router.pathname == "/dashboard/settings" ? "active" : ""}>
+                        <a className={router.pathname == "/dashboard/settings" ? "active" : ""} onClick={() => MenuClose(false)}> 
                             <i className="fa-solid fa-sliders"></i>
                             Settings
                         </a>

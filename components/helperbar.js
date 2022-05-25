@@ -1,19 +1,14 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import Image from 'next/image'
 
 const Helperbar = () => {
   return (
     <div className='helperbar'>
       <div className="d-flex justify-content-between mb-5">
-        <h3 className='g-title'>Today's Scheudle</h3>
+        <h3 className='g-title'>Today&apos;s Scheudle</h3>
         <div className="scheudle-icons">
           <i className="fa-solid fa-list"></i>
           <i className="fa-solid fa-calendar-days"></i>
@@ -34,13 +29,13 @@ const Helperbar = () => {
         <div className="call__box">
           <div className="collaborators">
             <div className='collaborators__img'>
-              <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+              <Image src="/img/col-1.webp" width="23" height="23" alt="" />
             </div>
             <div className='collaborators__img'>
-              <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
+              <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
             </div>
             <div className='collaborators__img'>
-              <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
+              <Image src="/img/col-3.webp" width="23" height="23" alt="" />
             </div>
           </div>
           <span className='call__time'>28:35</span>
@@ -79,13 +74,13 @@ const Helperbar = () => {
             <p className="g-subtitle mb-1">Team members</p>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+                <Image src="/img/col-1.webp" width="20" height="20" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
+                <Image src="/img/col-2.jpeg" width="20" height="20" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
+                <Image src="/img/col-3.webp" width="20" height="20" alt="" />
               </div>
             </div>
           </div>
@@ -108,18 +103,18 @@ const Helperbar = () => {
           navigation
           className='new-task__slide'
         >
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1200px-Mr._Smiley_Face.svg.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
+          <SwiperSlide><Image width={18} height={18} src="/img/smile.png" alt="" /></SwiperSlide>
         </Swiper>
       </div>
 
@@ -127,12 +122,12 @@ const Helperbar = () => {
 
       <div className="add-collaborators">
         <div className="add-collaborators__chip add-collaborators__chip--purple">
-          <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+        <Image src="/img/col-1.webp" width="20" height="20" alt="" />
           Angela
           <i className="fa-solid fa-xmark"></i>
         </div>
         <div className="add-collaborators__chip add-collaborators__chip--green">
-          <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+        <Image src="/img/col-1.webp" width="20" height="20" alt="" />
           Chris
           <i className="fa-solid fa-xmark"></i>
         </div>

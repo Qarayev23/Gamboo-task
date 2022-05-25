@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getSession, useSession } from 'next-auth/client';
 import { wrapper } from "../../store/store";
 import Tabs from 'react-bootstrap/Tabs'
@@ -26,13 +27,13 @@ const MyTasks = () => {
             <h3 className='dashboard-card__title'>R&D for New Banking Mobile App</h3>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+                <Image src="/img/col-1.webp" width="23" height="23" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
+                <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
+                <Image src="/img/col-3.webp" width="23" height="23" alt="" />
               </div>
             </div>
           </div>
@@ -46,16 +47,16 @@ const MyTasks = () => {
             <h3 className='dashboard-card__title'>Create Signup <br /> page</h3>
             <div className="collaborators">
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+                <Image src="/img/col-1.webp" width="23" height="23" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
+                <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
               </div>
               <div className='collaborators__img'>
-                <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
+                <Image src="/img/col-3.webp" width="23" height="23" alt="" />
               </div>
             </div>
-            <img src="/Screenshot from 2022-05-23 14-24-54 (2).png" className='dashboard-card__img' alt="" />
+            {/* <img src="/img/card-img.png" className='dashboard-card__img' alt="" /> */}
           </div>
         </div>
       </div>
@@ -89,9 +90,9 @@ const MyTasks = () => {
               <ul className='tasks-tab__list'>
                 {
                   data.map(item => {
-                    if (item.completed) {
+                    if (!item.completed) {
                       return <li className='tasks-tab__item' key={item.id}>
-                        <img src="https://cdn-icons-png.flaticon.com/128/839/839608.png" className='tasks-tab__icon' alt="" />
+                        <Image src="/img/task-icon.png" width={38} height={38} className='tasks-tab__icon' alt="" />
                         <div className="d-flex flex-column">
                           <h3 className='tasks-tab__title'>
                             {item.title}
@@ -102,13 +103,13 @@ const MyTasks = () => {
                         </div>
                         <div className="collaborators">
                           <div className='collaborators__img'>
-                            <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
+                            <Image src="/img/col-1.webp" width="23" height="23" alt="" />
                           </div>
                           <div className='collaborators__img'>
-                            <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
+                            <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
                           </div>
                           <div className='collaborators__img'>
-                            <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
+                            <Image src="/img/col-3.webp" width="23" height="23" alt="" />
                           </div>
                         </div>
                       </li>
@@ -119,72 +120,34 @@ const MyTasks = () => {
             </Tab>
             <Tab eventKey="completed" title="Completed">
               <ul className='tasks-tab__list'>
-                <li className='tasks-tab__item'>
-                  <img src="https://cdn-icons-png.flaticon.com/128/839/839608.png" className='tasks-tab__icon' alt="" />
-                  <div className="d-flex flex-column">
-                    <h3 className='tasks-tab__title'>
-                      Uber
-                    </h3>
-                    <p className="tasks-tab__text">
-                      App Design and Upgrades with new features - in Progress 16 days
-                    </p>
-                  </div>
-                  <div className="collaborators">
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
-                    </div>
-                  </div>
-                </li>
-                <li className='tasks-tab__item'>
-                  <img src="https://cdn-icons-png.flaticon.com/128/839/839608.png" className='tasks-tab__icon' alt="" />
-                  <div className="d-flex flex-column">
-                    <h3 className='tasks-tab__title'>
-                      Uber
-                    </h3>
-                    <p className="tasks-tab__text">
-                      App Design and Upgrades with new features - in Progress 16 days
-                    </p>
-                  </div>
-                  <div className="collaborators">
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
-                    </div>
-                  </div>
-                </li>
-                <li className='tasks-tab__item'>
-                  <img src="https://cdn-icons-png.flaticon.com/128/839/839608.png" className='tasks-tab__icon' alt="" />
-                  <div className="d-flex flex-column">
-                    <h3 className='tasks-tab__title'>
-                      Uber
-                    </h3>
-                    <p className="tasks-tab__text">
-                      App Design and Upgrades with new features - in Progress 16 days
-                    </p>
-                  </div>
-                  <div className="collaborators">
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/hWmWtnBtwzuUYvwyKrwF_fMY6DPp0QcRioEogbtobkI.jpg?auto=webp&s=afd433f5211abd7c8a3eed417664bd5d16935f3b" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://miro.medium.com/max/720/1*hFxL6hSu3xMbX4nb5AMx0A.jpeg" alt="" />
-                    </div>
-                    <div className='collaborators__img'>
-                      <img src="https://external-preview.redd.it/rK_knMShnIzXOi9G92I5AWQEiV83N61DD_Yq60ib5Ok.jpg?auto=webp&s=e6587373c6951fd2ada19038c20591865b92b941" alt="" />
-                    </div>
-                  </div>
-                </li>
+                {
+                  data.map(item => {
+                    if (item.completed) {
+                      return <li className='tasks-tab__item' key={item.id}>
+                        <Image src="/img/task-icon.png" width={38} height={38} className='tasks-tab__icon' alt="" />
+                        <div className="d-flex flex-column">
+                          <h3 className='tasks-tab__title'>
+                            {item.title}
+                          </h3>
+                          <p className="tasks-tab__text">
+                            {item.description}
+                          </p>
+                        </div>
+                        <div className="collaborators">
+                          <div className='collaborators__img'>
+                            <Image src="/img/col-1.webp" width="23" height="23" alt="" />
+                          </div>
+                          <div className='collaborators__img'>
+                            <Image src="/img/col-2.jpeg" width="23" height="23" alt="" />
+                          </div>
+                          <div className='collaborators__img'>
+                            <Image src="/img/col-3.webp" width="23" height="23" alt="" />
+                          </div>
+                        </div>
+                      </li>
+                    }
+                  })
+                }
               </ul>
             </Tab>
           </Tabs>

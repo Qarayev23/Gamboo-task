@@ -164,11 +164,13 @@
 
             &__title {
                 @include font(17, 600);
+                margin-left: rem(15);
             }
 
             &__text {
                 color: $gray;
                 @include font(12, 600);
+                margin-left: rem(15);
             }
 
             &__icon {

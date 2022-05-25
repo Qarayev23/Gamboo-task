@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className='register__title'>Sign in with Google</h1>
           <div className="google-btn" onClick={() => signIn()}>
             <div className="google-icon-wrapper">
-              <Image className="google-icon" width={46} height={46} src="/img/google.svg" alt=''/>
+              <img className="google-icon"  src="/img/google.svg" alt=''/>
             </div>
             <p className="btn-text">Sign in</p>
           </div>

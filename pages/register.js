@@ -22,9 +22,9 @@ export default function Home() {
         <div className='register'>
           <h4 className='user-info'>You are logged as: {session.user.name}</h4>
           <h4 className='user-info'>Email: {session.user.email}</h4>
-          {/* {session.user.image && (
+          {session.user.image && (
             <img src={session.user.image} className="user-avatar" alt={session.user.name} />
-          )} */}
+          )}
 
           <button className='sign-out' onClick={() => signOut()}>
             Sign Out

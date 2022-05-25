@@ -10,7 +10,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="user-info">
-                {/* <img className='user-avatar' src={session?.user.image} alt={session?.user.name} /> */}
+                <img className='user-avatar' src={session?.user.image} alt={session?.user.name} />
                 <div className='d-flex flex-column'>
                     <h4 className='user-name'>{session?.user.name}</h4>
                     <h4 className='user-position'>Front-end developer</h4>

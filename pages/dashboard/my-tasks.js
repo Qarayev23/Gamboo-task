@@ -56,7 +56,7 @@ const MyTasks = () => {
                 <Image src="/img/col-3.webp" width="23" height="23" alt="" />
               </div>
             </div>
-            {/* <img src="/img/card-img.png" className='dashboard-card__img' alt="" /> */}
+            <img src="/img/card-img.png" className='dashboard-card__img' alt="" />
           </div>
         </div>
       </div>

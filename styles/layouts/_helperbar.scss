@@ -1,5 +1,239 @@
 .helperbar {
-    width: rem(250);
-    background-color: gray;
-}
+    width: rem(350);
+    padding: rem(50) rem(30) rem(30) rem(30);
+    border-left: 1px solid #ebebeb;
 
+    .scheudle-icons {
+        display: flex;
+        gap: rem(15);
+        background-color: #f5f7fb;
+        padding: rem(7) rem(17);
+        border-radius: rem(20);
+
+        i {
+            font-size: rem(15);
+
+            &:first-of-type {
+                color: $gray;
+            }
+        }
+    }
+
+    .call {
+        padding-bottom: rem(50);
+        border-bottom: 1px solid #ebebeb;
+
+        &__text {
+            @include font(12, 600);
+            color: $red;
+            margin-bottom: rem(8);
+        }
+
+        &__title {
+            @include font(16, 700);
+        }
+
+        .invite-btn {
+            display: flex;
+            align-items: center;
+            gap: rem(7);
+            color: #6694e9;
+            @include font(12, 700);
+
+            i {
+                @include font(16, 700);
+                margin-top: rem(2);
+            }
+        }
+
+        &__box {
+            padding: rem(20);
+            background-color: #4adca1;
+            border-radius: rem(15);
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(74, 220, 161, 0.4) 0px 8px 24px;
+        }
+
+        &__time {
+            color: white;
+            @include font(16, 600);
+            margin-left: rem(30);
+            margin-right: auto;
+        }
+
+        &__icon {
+            color: white;
+
+            &:first-of-type {
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
+    .task-status {
+        padding-bottom: rem(40);
+        border-bottom: 1px solid #ebebeb;
+
+        &__title {
+            @include font(16, 700);
+        }
+
+        &__icon {
+            color: $gray;
+            margin-right: rem(10);
+        }
+
+        &__number {
+            @include font(28, 700, 32);
+            position: relative;
+            width: fit-content;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: rem(6);
+                height: rem(6);
+                right: rem(-10);
+                top: rem(5);
+                border-radius: 50%;
+            }
+
+            &--green {
+                &::after {
+                    background-color: #4adca1;
+                }
+            }
+
+            &--red {
+                &::after {
+                    background-color: $red;
+                }
+            }
+        }
+
+        .collaborators__img {
+            img {
+                width: rem(20);
+                height: rem(20)
+            }
+        }
+    }
+
+    .new-task {
+        padding-bottom: rem(20);
+        border-bottom: 1px solid #ebebeb;
+
+        input {
+            width: 100%;
+            border: transparent;
+            background-color: #f4f6f8;
+            padding: rem(7) rem(15);
+            border-radius: rem(10);
+        }
+
+        &__slide {
+            margin-top: rem(10);
+
+            img {
+                width: rem(18);
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: fit-content;
+                opacity: 1;
+
+                &::after {
+                    @include font(14, 900);
+                    color: $red;
+                }
+            }
+
+            .swiper-button-prev {
+                left: 0;
+                background: white;
+                padding-right: rem(21);
+            }
+
+            .swiper-button-next {
+                right: 0;
+                background: white;
+                padding-left: rem(21);
+
+            }
+        }
+    }
+
+    .add-collaborators {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__chip {
+            border-radius: rem(15);
+            display: flex;
+            align-items: center;
+            gap: rem(5);
+            padding: rem(4) rem(8);
+            @include font(12, 700);
+
+            img {
+                width: rem(15);
+                height: rem(15);
+                border-radius: 50%;
+            }
+
+            i {
+                margin-top: rem(3);
+                cursor: pointer;
+            }
+
+            &--purple {
+                background-color: #efebfc;
+                color: #9d84d9;
+
+                i {
+                    color: #7865b6;
+                }
+            }
+
+            &--green {
+                background-color: #eafcf7;
+                color: #6cb9a0;
+
+                i {
+                    color: #508f7c;
+                }
+            }
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(30);
+            height: rem(30);
+            border-radius: 50%;
+            color: gray;
+            @include font(18, 500, 15);
+            background-color: #f4f6f8;
+        }
+
+        &__enter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(30);
+            height: rem(30);
+            border-radius: 50%;
+            color: white;
+            background-color: $red;
+        }
+    }
+
+    .decor {
+        @include font(25, 700, 15);
+        color: $gray;
+    }
+}

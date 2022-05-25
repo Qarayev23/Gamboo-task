@@ -1,13 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { HYDRATE, createWrapper } from 'next-redux-wrapper'
-import user from './userSlice'
-import users from './usersSlice'
-import counter from './counterSlice'
+import tasks from './tasksSlice'
 
 const combinedReducer = combineReducers({
-  counter,
-  users,
-  user,
+  tasks,
 });
 
 const masterReducer = (state, action) => {
@@ -15,12 +11,9 @@ const masterReducer = (state, action) => {
 
     const nextState = {
       ...state,
-      counter: {
-        count: state.counter.count + action.payload.counter.count,
+      tasks: {
+        tasks: [...action.payload.tasks.tasks, ...state.tasks.tasks]
       },
-      // users: {
-      //   users: [...action.payload.users.users, ...state.users.users]
-      // },
      
     }
     return nextState;

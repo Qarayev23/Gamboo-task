@@ -1,9 +1,7 @@
 .sidebar {
-    width: rem(270);
+    width: rem(260);
     background-color: #fafafa;
     border-right: 1px solid #ebebeb;
-    border-top-left-radius: rem(15);
-    border-bottom-left-radius: rem(15);
     padding: rem(50) rem(20) rem(40) rem(30);
 
     &__caption {
@@ -23,7 +21,7 @@
             align-items: center;
         }
 
-        &__link {
+        a{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,7 +56,7 @@
                 }
             }
 
-            &--active {
+            &.active {
                 color: $red;
 
                 &::before {

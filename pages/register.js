@@ -1,13 +1,10 @@
 import { signIn, signOut, useSession } from 'next-auth/client';
-//import Page from '../components/Page';
 
 export default function Home() {
   const [session] = useSession();
 
   return (
     <>
-      {/* <Page title="Index Page" linkTo="/other" /> */}
-
       {!session && (
         <div className='register'>
           <h1 className='register__title'>Sign in with Google</h1>

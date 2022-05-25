@@ -2,6 +2,11 @@
     @include font(20, 700);
 }
 
+.g-subtitle{
+    @include font(13, 600);
+    color: $gray;
+}
+
 .collaborators {
     position: relative;
     z-index: 1;

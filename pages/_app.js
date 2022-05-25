@@ -5,7 +5,7 @@ import { wrapper } from "../store/store";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.min.css';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps: { session, ...pageProps } }) => {
   const router = useRouter()
 
   if (router.pathname.includes("/dashboard")) {

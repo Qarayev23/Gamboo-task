@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { useSession } from 'next-auth/client';
+import { useRouter } from 'next/router';
 
 const Sidebar = () => {
     const [session] = useSession();
+    const router = useRouter();
 
     return (
         <div className="sidebar">
@@ -19,50 +21,50 @@ const Sidebar = () => {
             </h5>
             <ul className='sidebar-nav'>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link sidebar-nav__link--active">
-                            <i class="fa-solid fa-list-check"></i>
+                    <Link href="/dashboard/my-tasks">
+                        <a className={router.pathname == "/dashboard/my-tasks" ? "active" : ""}>
+                            <i className="fa-solid fa-list-check"></i>
                             My tasks
                         </a>
                     </Link>
                 </li>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link">
-                            <i class="fa-solid fa-inbox"></i>
+                    <Link href="/dashboard/inbox">
+                        <a className={router.pathname == "/dashboard/inbox" ? "active" : ""}>
+                            <i className="fa-solid fa-inbox"></i>
                             Inbox
                         </a>
                     </Link>
                 </li>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link">
-                            <i class="fa-solid fa-diagram-project"></i>
+                    <Link href="/dashboard/projects" >
+                        <a className={router.pathname == "/dashboard/projects" ? "active" : ""}>
+                            <i className="fa-solid fa-diagram-project"></i>
                             Projects
                         </a>
                     </Link>
                 </li>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link">
-                            <i class="fa-regular fa-clock"></i>
+                    <Link href="/dashboard/standups" >
+                        <a className={router.pathname == "/dashboard/standups" ? "active" : ""}>
+                            <i className="fa-regular fa-clock"></i>
                             Standups
                         </a>
                     </Link>
                 </li>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link">
-                            <i class="fa-regular fa-calendar-minus"></i>
+                    <Link href="/dashboard/meetings" >
+                        <a className={router.pathname == "/dashboard/meetings" ? "active" : ""}>
+                            <i className="fa-regular fa-calendar-minus"></i>
                             Meetings
                         </a>
                     </Link>
                     <span className='sidebar-nav__notification'>5</span>
                 </li>
                 <li className="sidebar-nav__item">
-                    <Link href="/">
-                        <a className="sidebar-nav__link">
-                            <i class="fa-solid fa-sliders"></i>
+                    <Link href="/dashboard/settings" >
+                        <a className={router.pathname == "/dashboard/settings" ? "active" : ""}>
+                            <i className="fa-solid fa-sliders"></i>
                             Settings
                         </a>
                     </Link>
@@ -87,7 +89,7 @@ const Sidebar = () => {
             </ul>
 
             <button type='button' className='add-task'>
-                <i class="fa-solid fa-plus"></i>
+                <i className="fa-solid fa-plus"></i>
             </button>
 
             <p className='copyright-text'>2022 Nijat Garayev License</p>

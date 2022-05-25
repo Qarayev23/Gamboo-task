@@ -1,8 +1,12 @@
+import { useSession } from 'next-auth/client';
 import Head from 'next/head'
 import Helperbar from './helperbar'
 import Sidebar from './sidebar'
 
 export default function Layout({ children }) {
+  const [session] = useSession();
+  const username = session?.user.name.split(" ")[0]
+
   return (
     <>
       <Head>
@@ -15,7 +19,18 @@ export default function Layout({ children }) {
       <section className='dashboard'>
         <div className="dashboard__wrapper">
           <Sidebar />
-          {children}
+          <div className='main-content'>
+            <div className="d-flex justify-content-between align-item-center">
+              <h3 className='g-title'>Hi {username}!</h3>
+              <div className="complete">
+                <p className="complete__text">
+                  15% task completed
+                </p>
+                <div className="complete__bar"></div>
+              </div>
+            </div>
+            {children}
+          </div>
           <Helperbar />
         </div>
       </section>
